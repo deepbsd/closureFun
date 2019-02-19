@@ -12,11 +12,16 @@ function buildFunctions(){
 }
 
 let fire = buildFunctions();
-
+/*
 fire[0]();  // 3
 fire[1]();  // 3
 fire[2]();  // 3
+*/
 
+console.log("first calls: \n",
+fire[0](),"\n",
+fire[1](),"\n", 
+fire[2](),"\n"  )
 
 // Second example
 
@@ -33,10 +38,16 @@ function newBuildFunctions(){
 
 let fire1 = newBuildFunctions();
 
+console.log("second calls: \n",
+fire1[0](),"\n",
+fire1[1](),"\n", 
+fire1[2](),"\n"  )
+
+/*
 fire1[0]();  // 0
 fire1[1]();  // 1
 fire1[2]();  // 2
-
+*/
 
 // Third example
 
@@ -58,6 +69,7 @@ function thirdBuildFunctions(){
 let fire2 = thirdBuildFunctions();
 
 // What will this be?  'one' or 'four'?
+console.log("third calls: ")
 console.log( fire2[0]() );
 
 console.log( fire2[1]() );
