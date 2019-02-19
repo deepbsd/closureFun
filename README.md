@@ -2,6 +2,9 @@
 Closures are complicated subject in JS.  By no means am I an expert.  But I keep trying
 to learn more.
 
+I've been taking a class on Udemy called _Javascript: Understanding the Weird Parts_ by
+Anthony Alicea.
+
 I came across this today in my studies:
 
 ```
