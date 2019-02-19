@@ -8,6 +8,14 @@ function choosePresident(party){
     // number will get chosen for each separate call
     // so no two console.log's will have same number
     let num = Math.floor(Math.random()* 999)+100
+
+    // Each time a future console.log happens, this parent context will be gone
+    // But, what remains is a reference to a variable 'num' that was created during
+    // invocation of the parent function.  The ref remains even after the parent
+    // context has gone away.  That's why 'num' persists for the anonymous child
+    // function even though its parent context is long gone...
+
+
     return function(lastname){
         if (party==='democrat'){
             return `${num}: I vote for ${lastname}`
