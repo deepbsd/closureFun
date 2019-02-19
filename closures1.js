@@ -3,14 +3,17 @@
 
 
 function choosePresident(party){
+    // number will get chosen for each separate call
+    // so no two console.log's will have same number
+    let num = Math.floor(Math.random()* 999)+100
     return function(lastname){
         if (party==='democrat'){
-            return `I vote for ${lastname}`
+            return `${num}: I vote for ${lastname}`
         }
         if (party==='republican'){
-            return `I vote for ${lastname}`
+            return `${num}: I vote for ${lastname}`
         }
-        return `I'm not even voting!  It only encourages them!`
+        return `${num}:  I'm not even voting!  It only encourages them!`
     }
 }
 
