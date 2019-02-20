@@ -12,7 +12,7 @@ let passenger = {
 
 
 let seeUfo = function(calledby, greeting, message){
-    console.log('Passenger: ' + this.getFullName());
+    console.log('UFO Passenger: ' + this.getFullName());
     console.log("Called by: "+ ' ' + calledby + "   Arguments: " + greeting + ' ' + message);
     console.log("===================");
 }
@@ -41,4 +41,27 @@ seeUfo.call(passenger, 'call()', 'Hi Fox!', 'Look out for little green men!');  
 
 // using apply()  only difference is that arguments must be in ARRAY
 seeUfo.apply(passenger, ['apply()', 'Hey Fox!', "You're a spooky guy!"]);
+
+// Let's give Scully her own ufo...
+let newUfo = {
+    firstname: 'Dana',
+    lastname: 'Scully',
+    sayPassenger: function(){
+        let fullname = this.firstname + this.lastname;
+        return fullname;
+    }
+}
+
+
+// ***** WHY DOESN'T THIS WORK!!!!!  ****
+// 
+//
+//  I could also use an IIFE with apply or call:
+//(function(greeting, message){
+//    console.log("New Ufo Passenger: "+this.sayPassenger());
+//    console.log("Greeting: "+greeting+" Message: "+message);
+//    console.log("=================================");
+//}).apply(newUfo, ['Hey Scully', 'Be careful!'] )
+
+
 
