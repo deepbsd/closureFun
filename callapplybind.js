@@ -52,6 +52,14 @@ let newUfo = {
     }
 }
 
+let myUfo = function(greeting, message){
+    console.log("UFO Passenger: "+this.sayPassenger());
+    console.log("Greeting: ",greeting," Message: ",message);
+    console.log("=====================");
+}
+
+myUfo.apply(newUfo, ['hey', 'watch out'])
+
 
 // ***** WHY DOESN'T THIS WORK!!!!!  ****
 // 
@@ -64,4 +72,4 @@ let newUfo = {
 //}).apply(newUfo, ['Hey Scully', 'Be careful!'] )
 
 
-
+//myUfo.apply(newUfo, ['hey', 'watch out'])
