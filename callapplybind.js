@@ -11,9 +11,9 @@ let passenger = {
 }
 
 
-let seeUfo = function(greeting, message){
+let seeUfo = function(calledby, greeting, message){
     console.log('Passenger: ' + this.getFullName());
-    console.log("Arguments: " + greeting + ' ' + message);
+    console.log("Called by: "+ ' ' + calledby + "   Arguments: " + greeting + ' ' + message);
     console.log("===================");
 }
 
@@ -32,9 +32,13 @@ let logPassengerName = seeUfo.bind(passenger);
 // available under this new context
 
 // this works great
-logPassengerName('Be careful, Fox!', 'Do you see any aliens?');     // Passenger: Fox Mulder
+logPassengerName('bind()', 'Be careful, Fox!', 'Do you see any aliens?');     // Passenger: Fox Mulder
 
 
 // using call()  context is first variable, arguments follow context
-seeUfo.call(passenger, 'Hi Fox!', 'Look out for little green men!')  // add arguments after context
+seeUfo.call(passenger, 'call()', 'Hi Fox!', 'Look out for little green men!');  // add arguments after context
+
+
+// using apply()  only difference is that arguments must be in ARRAY
+seeUfo.apply(passenger, ['apply()', 'Hey Fox!', "You're a spooky guy!"]);
 
