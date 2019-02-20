@@ -8,7 +8,7 @@ let passenger = {
         let fullname = this.firstname + ' ' + this.lastname;
         return fullname;
     }
-}
+};
 
 
 let seeUfo = function(calledby, greeting, message){
@@ -47,7 +47,7 @@ let newUfo = {
     firstname: 'Dana',
     lastname: 'Scully',
     sayPassenger: function(){
-        let fullname = this.firstname + this.lastname;
+        let fullname = this.firstname + ' ' + this.lastname;
         return fullname;
     }
 };
@@ -58,4 +58,18 @@ let newUfo = {
     console.log("Greeting: ",greeting," Message: ",message);
     console.log("=====================");
 }).apply(newUfo, ['Hey Scully!', 'Watch out!'])
+
+
+
+// Function borrowing...
+let boss = {
+    firstname: 'Walter',
+    lastname: 'Skinner'
+};
+
+// We're borrowing the function sayPassenger() from newUfo...
+console.log("newUfo: ",newUfo.sayPassenger.apply(boss));
+// Try it on the first function called seeUfo()
+console.log("passenger obj: ",passenger.getFullName.apply(boss))
+
 
