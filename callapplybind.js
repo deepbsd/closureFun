@@ -15,7 +15,7 @@ let seeUfo = function(calledby, greeting, message){
     console.log('UFO Passenger: ' + this.getFullName());
     console.log("Called by: "+ ' ' + calledby + "   Arguments: " + greeting + ' ' + message);
     console.log("===================");
-}
+};
 
 
 let logPassengerName = seeUfo.bind(passenger);
@@ -50,26 +50,12 @@ let newUfo = {
         let fullname = this.firstname + this.lastname;
         return fullname;
     }
-}
+};
 
-let myUfo = function(greeting, message){
+// I could just make an IIFE for the function and use apply with it...
+(function(greeting, message){
     console.log("UFO Passenger: "+this.sayPassenger());
     console.log("Greeting: ",greeting," Message: ",message);
     console.log("=====================");
-}
+}).apply(newUfo, ['Hey Scully!', 'Watch out!'])
 
-myUfo.apply(newUfo, ['hey', 'watch out'])
-
-
-// ***** WHY DOESN'T THIS WORK!!!!!  ****
-// 
-//
-//  I could also use an IIFE with apply or call:
-//(function(greeting, message){
-//    console.log("New Ufo Passenger: "+this.sayPassenger());
-//    console.log("Greeting: "+greeting+" Message: "+message);
-//    console.log("=================================");
-//}).apply(newUfo, ['Hey Scully', 'Be careful!'] )
-
-
-//myUfo.apply(newUfo, ['hey', 'watch out'])
