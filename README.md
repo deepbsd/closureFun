@@ -94,7 +94,7 @@ it had in the for loop at that instant the function was pushed onto the array.
 
 # What's the Takeaway?
 
-I think there is more than one.  
+I think there are more than one.  
 
 First, don't go any further up the scope chain than
 you need to.  Get into the habit of using `let` and `const`.  But you need to
