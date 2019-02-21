@@ -60,8 +60,9 @@ let newUfo = {
 }).apply(newUfo, ['Hey Scully!', 'Watch out!'])
 
 
-
-// Function borrowing...
+// ************************************************************ //
+//                    Function borrowing...
+// ************************************************************ //
 let boss = {
     firstname: 'Walter',
     lastname: 'Skinner'
@@ -72,4 +73,21 @@ console.log("newUfo: ",newUfo.sayPassenger.apply(boss));
 // Try it on the first function called seeUfo()
 console.log("passenger obj: ",passenger.getFullName.apply(boss))
 
+
+// ************************************************************ //
+//                    Function currying ...
+// ************************************************************ //
+// Function currying is using another function but binding a different 
+// parameter to a new function, so the new function becomes a specialized
+// version of the curried function.  Adds a default value as a parameter.
+console.log("============ Function Currying =============")
+
+function multiply(a, b){
+    return a * b;
+}
+
+let multiplyByFour = multiply.bind(this, 4);
+
+// Now multiplyByFour() will take only one argument and always multiply it by 4
+console.log("Function currying: multiplyByFour(4): ",multiplyByFour(4));   // 16
 
