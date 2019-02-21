@@ -46,7 +46,7 @@ let checkPastLimit = function(limiter){
 
 // Here we pass in the limiter using CALL
 let limiter = 2;
-let greaterThan2 = mapForEach(arr, checkPastLimit.call(this, limiter));
+let greaterThan2 = mapForEach(arr, checkPastLimit(limiter));
 console.log(greaterThan2);
 
 
