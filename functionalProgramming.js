@@ -49,6 +49,8 @@ let limiter = 2;
 let greaterThan2 = mapForEach(arr, checkPastLimit(limiter));
 console.log(greaterThan2);
 
+// Another takeaway:  Only mutate data at high level, NOT down in low level functions
+
 
 
 
