@@ -1,3 +1,31 @@
+# Overview
+
+This repo started life just for experimenting with closures after viewing part of Anthony Alicea's Udemy course: _Javascript: Understanding
+the Weird Parts_.  But now it's about other advanced JS things, like call(), apply(), bind(), Reflection and Extend, and some things on Object
+Prototypes.  There's some stuff on functional programming and UnderscoreJS too. 
+
+# Some of the files...
+
+Tony's course typically shows results in his video of the browser's console.  I typically like to do things in a Node terminal.  So I just
+create files from the CLI and invoke them using Node.  But there is an `index.html` and an `app.js` in here.  I'm not sure what happened to
+me.  But it's just for one or two small ideas.
+
+* `index.html` Just out of habit of following Tony's class.  This file simply loads the `app.js` in the same directory, and you can open the
+  console to see what happens.
+* `app.js` gets loaded into the browser by the `index.html` file.
+* `closures.js` This is the file that I started off with.
+* `closures1.js` More ideas, more experiments on closures...
+* `closures3.js` Start getting into call() apply() bind() 
+* `callapplybind.js`  more about call() apply() bind() and intro to function currying and function borrowing.
+* `functionalProgramming.js`  This is more about passing functions as parameters and how it can be useful to
+  simply and DRY code.
+
+
+Starting with _Closure Fun_ the README.md is just about Closures.  But this repo is actually about more now.
+It's really about learning to regard JS as a unique language ideally suited for functional programming.
+
+
+
 # Closure Fun
 Closures are complicated subject in JS.  By no means am I an expert.  But I keep trying
 to learn more.
