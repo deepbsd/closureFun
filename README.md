@@ -4,6 +4,18 @@ This repo started life just for experimenting with closures after viewing part o
 the Weird Parts_.  But now it's about other advanced JS things, like call(), apply(), bind(), Reflection and Extend, and some things on Object
 Prototypes.  There's some stuff on functional programming and UnderscoreJS too. 
 
+# Updates
+
+_February 22, 2019_:  I've gotten as far as Section 7 (Odds and Ends), and there's still a lot more to absorb on the previous section about
+constructors and prototypes and the _new_ operator.  I haven't practiced _Reflection_ and _Extend_.  There's more to play with about
+_Prototypal Inheritance_ and the Object Prototype for a class.  For example, how does an object accrue prototypes?  I guess they're in a chain
+that get searched sequentially, but how easily are they mutated?  Can they be moved in their respective sequence or priority?  Is there a use
+case for pursuing that line of thought?  Can I get a listing of all object prototypes an object has back to the basic object?  Python, for
+example, has some ways of seeing all the methods and attributes that an object has inherited.  Does JS have a way of doing that?  Or is
+`MyObj.__proto__` the only way?  Seems like the course work only opens up more questions to be asked in this vein. 
+
+I will need to come back to this material and play with it until I get more comfortable with how these principles work in JS.
+
 # Some of the files...
 
 Tony's course typically shows results in his video of the browser's console.  I typically like to do things in a Node terminal.  So I just
@@ -23,7 +35,6 @@ me.  But it's just for one or two small ideas.
 
 Starting with _Closure Fun_ the README.md is just about Closures.  But this repo is actually about more now.
 It's really about learning to regard JS as a unique language ideally suited for functional programming.
-
 
 
 # Closure Fun
